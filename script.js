@@ -6,9 +6,7 @@ navToggle.addEventListener("click", function () {
 });
 
 //function to fetch data from api
-
-let getMovie = () => {
-  const url = "https://moviesverse1.p.rapidapi.com/movies/year/%7Byear%7D/1";
+const url = "https://moviesverse1.p.rapidapi.com/movies/year/%7Byear%7D/1";
   const options = {
     method: "GET",
     headers: {
@@ -16,4 +14,15 @@ let getMovie = () => {
       "X-RapidAPI-Host": "moviesverse1.p.rapidapi.com",
     },
   };
-};
+
+
+  async function getdata(){
+    const response = await fetch(url,options);
+    const data = await response.json()
+    console.log(data.movies)
+  }
+
+
+  
+getdata()
+
