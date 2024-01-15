@@ -16,13 +16,22 @@ const url = "https://moviesverse1.p.rapidapi.com/movies/year/%7Byear%7D/1";
   };
 
 
-  async function getdata(){
-    const response = await fetch(url,options);
-    const data = await response.json()
-    console.log(data.movies)
-  }
+//   async function getdata(){
+//     const response = await fetch(url,options);
+//     const data = await response.json()
+//     console.log(data.movies)
+//   }
 
 
   
-getdata()
+// getdata()
 
+fetch(url ,options).then(res=>res.json()).then(json =>{
+    console.log(json.movies)
+    const list = document.querySelector(".List")
+    list.innerHTML=`${json.movies[1].link}`
+    
+
+    const moviesList = json.movies.map(movie => `<li><a href="${movie.link}">${movie.text}</a></li>` )
+    list.innerHTML = `<ul>${moviesList.join("")}</ul>`;
+})
