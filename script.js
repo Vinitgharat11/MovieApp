@@ -1,4 +1,5 @@
-const url = "https://moviesverse1.p.rapidapi.com/movies/year/%7Byear%7D/1";
+const url = "https://moviesverse1.p.rapidapi.com/movies/";
+let currentPage = 1
 const options = {
   method: "GET",
   headers: {
@@ -7,8 +8,8 @@ const options = {
   },
 };
 
-async function getMoviesData() {
-  const response = await fetch(url, options);
+async function getMoviesData(page) {
+  const response = await fetch(`${url}${page}`,options);
   const data = await response.json();
   return data;
 }
@@ -16,7 +17,8 @@ async function getMoviesData() {
 const container = document.getElementById("Movie");
 
 async function displayMovieImages() {
-  const moviesData = await getMoviesData();
+  const moviesData = await getMoviesData(currentPage);
+  container.innerHTML = ''; // 
   moviesData.movies.forEach((movie) => {
     const MovieCard = document.createElement("div");
     MovieCard.classList.add("Movie-card");
@@ -34,4 +36,12 @@ async function displayMovieImages() {
     container.appendChild(MovieCard);
   });
 }
+
+
+async function nextPage() {
+  currentPage++;
+  await getMoviesData(currentPage);
+  displayMovieImages();
+}
 displayMovieImages();
+

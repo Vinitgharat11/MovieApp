@@ -15,6 +15,7 @@ a{
 .Movie-container{
   display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+ 
 
 }
 
@@ -28,14 +29,16 @@ img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  width: 150px;
+  width: 90%;
   height: 200px;
   padding: 20px 5px;
   border-radius: 12px;
 }
 a{
   font-size: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -43,7 +46,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     padding: 100px 120px;
-    background-color: red;
+  
     
   }
 }
@@ -51,7 +54,7 @@ a{
   .Movie-container{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    background-color: blue;
+
     gap: 12px;
     
   }
