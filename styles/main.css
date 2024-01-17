@@ -1,0 +1,15 @@
+
+
+.mainContainer{
+  background-color: #3C0753;
+  width: 80%;
+  height: 99vh;
+
+}
+.logo{
+  text-align: center;
+}
+.logo a{
+  color: white;
+  font-size: 40px;
+}

@@ -1,0 +1,24 @@
+{
+  "categories":[
+    {
+      "id":1,
+      "category":"Latest-Movies"
+    },
+    {
+      "id":2,
+      "category":"Bollywood"
+    },
+    {
+      "id":3,
+      "category":"Hindi-Movies"
+    },
+    {
+      "id":4,
+      "category":"South-Movies"
+    },
+    {
+      "id":5,
+      "category":"marathi-movies"
+    }
+  ]
+}
