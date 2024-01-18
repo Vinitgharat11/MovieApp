@@ -1,15 +1,26 @@
-
-
-.mainContainer{
-  background-color: #3C0753;
+.mainContainer {
+  background-color: #3c0753;
   width: 80%;
   height: 99vh;
-
 }
-.logo{
+.logo {
   text-align: center;
 }
-.logo a{
+.logo a {
   color: white;
   font-size: 40px;
+}
+
+.categoryBtns{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Buttons {
+  padding: 6px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #424769;
+  color: white;
 }
